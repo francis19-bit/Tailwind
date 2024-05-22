@@ -1,0 +1,56 @@
+body {
+  /* width: 100vw; */
+  /* height: 100vh; */
+  /* background: red; */
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  /* border-collapse: collapse; */
+  width: 100%;
+}
+
+tr {
+  /* Add padding or margin to create space between rows */
+  margin-bottom: 10vh;
+  /* Adjust this value as needed */
+}
+
+.active .NavBarBtns {
+  color: white;
+  border-radius: 0.5vw;
+  background: #5932ea;
+}
+
+/* .newactive {
+  color: white;
+  border-radius: 0.5vw;
+  background: #5932ea;
+} */
+
+.NavBarBtns {
+  color: #9fa4bc;
+}
+
+.react-international-phone-input {
+  border: transparent;
+  background-color: transparent;
+  height: auto;
+}
+
+.react-international-phone-country-selector-button {
+  height: 80%;
+  background-color: transparent;
+  border: 0px;
+}
+
+.custom-swal-container {
+  z-index: 50000; /* Custom z-index value */
+}
