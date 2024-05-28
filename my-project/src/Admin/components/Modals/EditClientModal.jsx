@@ -346,7 +346,7 @@ const EditClientModal = ({ ClientData }) => {
         {/* top: "50%",
         left: "50%", */}
         <Box
-          className="lg:top-[50%] lg:left-[50%] tb:w-[100%] tb:top-[50%] tb:left-[50%] cardBackground primaryTextColor md:overflow-y-hidden md:flex md:flex-col md:h-[94%] md:w-[65%] sm:w-[70%] sm:h-[72%] sm:flex sm:flex-col sm:overflow-y-hidden sm:top-[35.5%] sm:left-[63.8%]"
+          className="lg:top-[50%] lg:left-[50%] tb:w-[100%] tb:top-[50%] tb:left-[50%] cardBackground primaryTextColor md:overflow-y-hidden md:flex md:flex-col md:h-[94%] md:w-[100%] sm:w-[70%] sm:h-[72%] sm:flex sm:flex-col sm:overflow-y-hidden sm:top-[45.5%] sm:left-[63.8%]"
           sx={{ ...style, paddingBottom: "2vh" }}
         >
           <div style={{ flex: ".2" }}>

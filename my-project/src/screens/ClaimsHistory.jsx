@@ -86,7 +86,10 @@ const ClaimsHistory = () => {
     >
       {/* // HEader and search */}
       <div className="sm:basis-[30%]">
-        <h2 className=" md:text-[1.3em]" style={{ float: "left" }}>
+        <h2
+          className=" md:text-[.8em] sm:text-[.8em] lg:text-[1em]"
+          style={{ float: "left" }}
+        >
           {" "}
           Claims History
         </h2>{" "}
@@ -110,7 +113,7 @@ const ClaimsHistory = () => {
       {/* Table */}
 
       <div
-        className="sm:basis-[70%] lg:text-[1em] tb:text-[1.1em] md:text-[1.3em]"
+        className="sm:basis-[70%] lg:text-[.9em] tb:text-[.9em] md:text-[.9em]"
         style={{
           // flex: ".8",
           display: AllClaims.length === 0 ? "flex" : "",

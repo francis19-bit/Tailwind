@@ -41,7 +41,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const loginUserDetails = useSelector(selectLoginUserDetails);
-
+  
   const { ProfileImage, ContactName, CompanyName } = loginUserDetails || {};
 
   const handleLogout = () => {
@@ -262,7 +262,7 @@ const Home = () => {
           </Card>
         </div>
       </div>
-
+      
       {/* Contents */}
       <div
         className="lg:basis-[77%] lg:flex lg:flex-col md:basis-[100%]   sm:basis-[100%]"
@@ -278,11 +278,15 @@ const Home = () => {
               // background: "red",
             }}
           >
+            <div style={{display:"flex", gap:20, alignItems:"center"}}>
             <div className="lg:hidden sm:block">
               {/* Drawer */}
-              {/* <Admin_TemporaryDrawer /> */}
+              <Admin_TemporaryDrawer />
             </div>
-            <Avatar src={ProfileImage} /> <span>Hello {ContactName} 👋,</span>{" "}
+           <div style={{display:"flex", flexDirection:"row",gap:20, alignItems:"center"}}>
+           <Avatar src={ProfileImage} /> <span>Hello {ContactName} 👋,</span>{" "}
+           </div>
+            </div>
           </div>
           <TextField
             sx={{ float: "right" }}

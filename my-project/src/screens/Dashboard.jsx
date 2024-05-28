@@ -153,7 +153,7 @@ const Dashboard = () => {
               </IconButton>
             </div>
             <div style={{ flex: ".7" }}>
-              <h6 className="tb:text-[1.1em]">No of policies</h6>{" "}
+              <h6 className="tb:text-[1em] lg:text-[.9em]">No of policies</h6>{" "}
               <h2>{allPolicies.length}</h2>{" "}
             </div>
           </div>
@@ -176,7 +176,7 @@ const Dashboard = () => {
             </div>
             <div style={{ flex: ".7" }}>
               {" "}
-              <h6 className="tb:text-[1.1em]">Claims</h6>{" "}
+              <h6 className="tb:text-[1em]  lg:text-[.9em]">Claims</h6>{" "}
               <h2>
                 {
                   AllClaims.filter(
@@ -204,7 +204,7 @@ const Dashboard = () => {
               </IconButton>
             </div>
             <div style={{ flex: ".7" }}>
-              <h6 className="tb:text-[1.1em]">Outstanding Premium</h6>{" "}
+              <h6 className="tb:text-[1em]  lg:text-[.9em]">Outstanding Premium</h6>{" "}
               <h2>
                 {
                   AllPremiums.filter(
@@ -247,7 +247,7 @@ const Dashboard = () => {
             </div>
             <div style={{ flex: ".7" }}>
               {" "}
-              <h6 className="tb:text-[1.1em]">Upcoming Renewals</h6>{" "}
+              <h6 className="tb:text-[1em]  lg:text-[.9em]">Upcoming Renewals</h6>{" "}
               <h2>{filteredPolicyBasedOnExpiryDate.length}</h2>{" "}
             </div>
           </div>
@@ -270,7 +270,7 @@ const Dashboard = () => {
             </div>
             <div style={{ flex: ".7" }}>
               {" "}
-              <h6 className="tb:text-[1.1em]">Outstanding </h6> <h2>13</h2>{" "}
+              <h6 className="tb:text-[1em]  lg:text-[.9em]">Outstanding </h6> <h2>13</h2>{" "}
             </div>
           </div>
 
@@ -325,7 +325,7 @@ const Dashboard = () => {
               }}
             >
               {" "}
-              <h3 className="tb:text-[1.2em]">Upcoming Renewals</h3>
+              <h3 className="tb:text-[1em] lg:text-[.9em]">Upcoming Renewals</h3>
             </div>
             <TextField
               sx={{ float: "right", width: 200 }}
@@ -351,16 +351,16 @@ const Dashboard = () => {
               <thead>
                 {" "}
                 {/* style={{ width: "17.4vw" }} */}
-                <th align="left" className="sm:w-[19.4vw] tb:text-[1.2em]">
+                <th align="left" className="sm:w-[19.4vw] tb:text-[1em]  lg:text-[.9em]">
                   Product Name
                 </th>{" "}
                 {/* style={{ width: "10vw" }} */}
-                <th align="left" className="sm:w-[8vw] tb:text-[1.2em]">
+                <th align="left" className="sm:w-[8vw] tb:text-[1em] lg:text-[.9em]">
                   Description
                 </th>{" "}
-                <th className="tb:text-[1.2em]">Premium </th>{" "}
+                <th className="tb:text-[1em] lg:text-[.9em]">Premium </th>{" "}
               </thead>
-              <tbody className="lg:text-[1em] sm:text-[.9em] sm:gap-[2vh] tb:text-[1.2em] tb:gap-[2vh]">
+              <tbody className="lg:text-[.9em] sm:text-[.9em] sm:gap-[2vh] tb:text-[1.2em] tb:gap-[2vh]">
                 <tr
                 // style={{ paddingTop: "4vh" }}
                 >
@@ -371,7 +371,7 @@ const Dashboard = () => {
                   "
                   >
                     <div
-                      className="tb:w-[15vw]"
+                      className="tb:w-[15vw] lg:w-[10vw]"
                       style={{
                         flex: ".6",
                         background: `url(${abstractImage})`,
@@ -381,14 +381,14 @@ const Dashboard = () => {
                     >
                       {/* <Avatar /> */}
                     </div>
-                    <div>
-                      <p style={{ margin: 0 }}> Motor Insurance</p>
+                    <div style={{display:"flex", alignItems:"flex-start", flexDirection:"column"}}>
+                      <p style={{ margin: 0, fontWeight:"800" }}> Motor Insurance</p>
                       <span style={{ fontSize: ".8em" }}>totyota elantra</span>
                     </div>
                   </td>{" "}
                   <td>
                     {" "}
-                    <p style={{ margin: 0 }}> Motor Insurance</p>
+                    <p style={{ margin: 0 , fontWeight:"800"}}> Motor Insurance</p>
                     <span style={{ fontSize: ".8em" }}>totyota elantra</span>
                   </td>
                   <td>1,299</td>
@@ -403,7 +403,7 @@ const Dashboard = () => {
                   "
                   >
                     <div
-                      className="tb:w-[15vw]"
+                     className="tb:w-[15vw] lg:w-[10vw]"
                       style={{
                         flex: ".6",
                         background: `url(${abstractImage})`,
@@ -413,8 +413,8 @@ const Dashboard = () => {
                     >
                       {/* <Avatar /> */}
                     </div>
-                    <div>
-                      <p className="tb:text-[1.1em]" style={{ margin: 0 }}>
+                    <div style={{display:"flex", alignItems:"flex-start", flexDirection:"column"}}>
+                      <p className="tb:text-[1.1em]" style={{ margin: 0, fontWeight:"800" }}>
                         {" "}
                         Motor Insurance
                       </p>
@@ -423,7 +423,7 @@ const Dashboard = () => {
                   </td>{" "}
                   <td>
                     {" "}
-                    <p style={{ margin: 0 }}> Motor Insurance</p>
+                    <p style={{ margin: 0, fontWeight:"800" }}> Motor Insurance</p>
                     <span style={{ fontSize: ".8em" }}>totyota elantra</span>
                   </td>
                   <td>1,299</td>
@@ -456,7 +456,7 @@ const Dashboard = () => {
               }}
             >
               {" "}
-              <h3 className="tb:text-[1.2em]">Claims history</h3>
+              <h3 className="tb:text-[1em] lg:text-[.9em]">Claims history</h3>
             </div>
             <TextField
               sx={{ float: "right", width: 200 }}
@@ -482,22 +482,22 @@ const Dashboard = () => {
               <thead>
                 {" "}
                 {/* style={{ width: "17.4vw" }} className="tb:text-[1.2em]" */}
-                <th align="left" className="sm:w-[19.4vw] tb:text-[1.2em]">
+                <th align="left" className="sm:w-[19.4vw] tb:text-[1em] lg:text-[.9em]">
                   Product Name
                 </th>{" "}
                 {/* style={{ width: "10vw" }} */}
-                <th align="left" className="sm:w-[8vw] tb:text-[1.2em]">
+                <th align="left" className="sm:w-[8vw] tb:text-[1em]">
                   Description
                 </th>{" "}
-                <th className="tb:text-[1.2em]">Premium </th>{" "}
+                <th className="tb:text-[1em] lg:text-[.9em]">Premium </th>{" "}
               </thead>
-              <tbody className="lg:text-[1em] sm:text-[.9em] sm:gap-[2vh] tb:text-[1.2em] tb:gap-[2vh]">
+              <tbody className="lg:text-[.9em] sm:text-[.9em] sm:gap-[2vh] tb:text-[1em] tb:gap-[2vh]">
                 <tr style={{ paddingBottom: "4vh" }}>
                   {" "}
                   {/* style={{ width: "17.4vw", display: "flex", gap: ".5vw" }} */}
                   <td className="sm:width-[17.4vw] sm:flex sm:gap-[.5vw]">
                     <div
-                      className="tb:w-[15vw]"
+                      className="tb:w-[15vw]  lg:w-[10vw]"
                       style={{
                         flex: ".6",
                         background: `url(${abstractImage})`,
@@ -507,14 +507,14 @@ const Dashboard = () => {
                     >
                       {/* <Avatar /> */}
                     </div>
-                    <div>
-                      <p style={{ margin: 0 }}> Motor Insurance</p>
+                    <div style={{display:"flex", alignItems:"flex-start", flexDirection:"column"}}>
+                      <p style={{ margin: 0, fontWeight:"800" }}> Motor Insurance</p>
                       <span style={{ fontSize: ".8em" }}>totyota elantra</span>
                     </div>
                   </td>{" "}
                   <td>
                     {" "}
-                    <p style={{ margin: 0 }}> Motor Insurance</p>
+                    <p style={{ margin: 0, fontWeight:"800" }}> Motor Insurance</p>
                     <span style={{ fontSize: ".8em" }}>totyota elantra</span>
                   </td>
                   <td>1,299</td>
@@ -535,14 +535,14 @@ const Dashboard = () => {
                     >
                       {/* <Avatar /> */}
                     </div>
-                    <div>
-                      <p style={{ margin: 0 }}> Motor Insurance</p>
+                    <div  style={{display:"flex", alignItems:"flex-start", flexDirection:"column"}}>
+                      <p style={{ margin: 0, fontWeight:"800" }} > Motor Insurance</p>
                       <span style={{ fontSize: ".8em" }}>totyota elantra</span>
                     </div>
                   </td>{" "}
                   <td>
                     {" "}
-                    <p style={{ margin: 0 }}> Motor Insurance</p>
+                    <p style={{ margin: 0 , fontWeight:"800"}}> Motor Insurance</p>
                     <span style={{ fontSize: ".8em" }}>totyota elantra</span>
                   </td>
                   <td>1,299</td>

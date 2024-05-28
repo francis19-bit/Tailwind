@@ -2,8 +2,8 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
-import { Card } from "@mui/material";
-// import imageLogo from "../../../../logos/logo.png";
+import { Card, IconButton } from "@mui/material";
+import imageLogo from "../../../../logos/logo.png";
 import {
   DoorBackOutlined,
   HelpOutlineOutlined,
@@ -15,7 +15,11 @@ import {
   WorkHistoryOutlined,
 } from "@mui/icons-material";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import {
+  setLoginStatus,
+  setLoginUserDetails,
+} from "../../../statemanager/slices/LoginUserSlice";
 
 export default function Admin_TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -54,6 +58,7 @@ export default function Admin_TemporaryDrawer() {
       role="presentation"
       //   onClick={toggleDrawer(anchor, false)}
       //   onKeyDown={toggleDrawer(anchor, false)}
+      // onClick={toggleDrawer(anchor, false)}
     >
       {/* // Header  */}
       <div onClick={toggleDrawer(anchor, false)}>
@@ -69,15 +74,8 @@ export default function Admin_TemporaryDrawer() {
             // backgroundColor: "red",
           }}
         >
-          <div
-            style={{
-              flex: ".15",
-              display: "flex",
-              gap: "1.5vw",
-              alignItems: "center",
-            }}
-          >
-            {/* <img src={imageLogo} style={{ height: "40px" }} />{" "} */}
+          <div style={{ flex: ".15", display: "flex", gap: "1.5vw" }}>
+            <img src={imageLogo} style={{ height: "40px" }} />{" "}
             <h2>Dashboard</h2>
             <div>{/* className="lg:hidden" */}</div>
           </div>
@@ -88,7 +86,6 @@ export default function Admin_TemporaryDrawer() {
               flexDirection: "column",
               gap: "1.5vh",
               alignItems: "center",
-              // justifyContent: "center",
             }}
           >
             {/* <Link to="/Admin-Panel/dashboard">
@@ -97,11 +94,11 @@ export default function Admin_TemporaryDrawer() {
 
             <NavLink
               to="/dashboard"
-              // style={{ display: "flex", flexDirection: "row" }}
+              style={{ display: "flex", flexDirection: "row" }}
             >
               <Button
                 color="primary"
-                className="NavBarBtns "
+                className="NavBarBtns"
                 style={{
                   textTransform: "none",
                   borderRadius: ".5vw",
@@ -110,7 +107,6 @@ export default function Admin_TemporaryDrawer() {
 
                   width: "40.4vw",
                   height: "6.5vh",
-                  // paddingRight: "7vw",
                 }}
                 startIcon={<Speed />}
               >
@@ -120,7 +116,7 @@ export default function Admin_TemporaryDrawer() {
 
             <NavLink
               to="/insurance_products"
-              // style={{ display: "flex", flexDirection: "row" }}
+              style={{ display: "flex", flexDirection: "row" }}
             >
               <Button
                 color="primary"
@@ -138,10 +134,7 @@ export default function Admin_TemporaryDrawer() {
               </Button>
             </NavLink>
 
-            <NavLink
-              to="/upcoming_renewals"
-              // style={{ display: "flex", flexDirection: "row" }}
-            >
+            <NavLink to="/upcoming_renewals">
               <Button
                 className="NavBarBtns"
                 color="primary"
@@ -160,20 +153,18 @@ export default function Admin_TemporaryDrawer() {
 
             <NavLink
               to="/claims_history"
-              // style={{ display: "flex", flexDirection: "row" }}
+              style={{ display: "flex", flexDirection: "row" }}
             >
               <Button
                 color="primary"
                 className="NavBarBtns"
-                style={
-                  {
-                    // textTransform: "none",
-                    // borderRadius: ".5vw",
-                    // width: "17.4vw",
-                    // height: "6.5vh",
-                    // paddingRight: "10.5vw",
-                  }
-                }
+                // style={{
+                //   textTransform: "none",
+                //   borderRadius: ".5vw",
+                //   width: "17.4vw",
+                //   height: "6.5vh",
+                //   paddingRight: "5.5vw",
+                // }}
                 startIcon={<PaymentsOutlined />}
               >
                 Claims history
@@ -182,7 +173,7 @@ export default function Admin_TemporaryDrawer() {
 
             <NavLink
               to="/premiums_history"
-              // style={{ display: "flex", flexDirection: "row" }}
+              style={{ display: "flex", flexDirection: "row" }}
             >
               <Button
                 color="primary"
@@ -201,7 +192,7 @@ export default function Admin_TemporaryDrawer() {
             </NavLink>
             <NavLink
               to="/help"
-              // style={{ display: "flex", flexDirection: "row" }}
+              style={{ display: "flex", flexDirection: "row" }}
             >
               <Button
                 className="NavBarBtns"
@@ -220,10 +211,9 @@ export default function Admin_TemporaryDrawer() {
             </NavLink>
 
             <Button
-              // style={{ display: "flex", flexDirection: "row" }}
               onClick={handleLogout}
               className="NavBarBtns"
-              color="primary md:pr-[20vw]"
+              color="primary"
               // style={{
               //   textTransform: "none",
               //   borderRadius: ".5vw",
@@ -293,7 +283,10 @@ export default function Admin_TemporaryDrawer() {
         <React.Fragment key={anchor}>
           {/* <Button>{anchor} sat </Button> */}
 
-          <Menu onClick={toggleDrawer(anchor, true)} />
+          <IconButton>
+            <Menu onClick={toggleDrawer(anchor, true)} sx={{ fontSize: 30 }} />
+          </IconButton>
+
           <Drawer
             anchor={anchor}
             open={state[anchor]}

@@ -18,7 +18,7 @@ import {
 } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
 
-import { Button } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import {
   selectAdminLoginUserDetails,
@@ -117,6 +117,7 @@ export default function Users_TemporaryDrawer() {
               display: "flex",
               flexDirection: "column",
               gap: "1.5vh",
+              alignItems: "center",
             }}
           >
             <NavLink
@@ -307,7 +308,9 @@ export default function Users_TemporaryDrawer() {
           {/* <Button>{anchor} sat </Button> */}
 
           {/* <PlayerProfileAdd clickFunction={toggleDrawer(anchor, true)} /> */}
-          <Menu onClick={toggleDrawer(anchor, true)} />
+          <IconButton>
+            <Menu onClick={toggleDrawer(anchor, true)} sx={{ fontSize: 30 }} />
+          </IconButton>
 
           <Drawer
             anchor={anchor}

@@ -284,14 +284,26 @@ const AdminHome = () => {
               alignItems: "center",
             }}
           >
-            <div className="lg:hidden sm:block">
-              <Users_TemporaryDrawer />
+            <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+              <div className="lg:hidden sm:block">
+                {/* Drawer */}
+                <Users_TemporaryDrawer />
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  gap: 20,
+                  alignItems: "center",
+                }}
+              >
+                <Avatar src="" />
+                <span>
+                  Hello {AdminLoginDetails?.FirstName}
+                  {LastName} (Admin) 👋 ,
+                </span>{" "}
+              </div>
             </div>
-            <Avatar src="" />{" "}
-            <span>
-              Hello {AdminLoginDetails?.FirstName}
-              {LastName} (Admin) 👋 ,
-            </span>{" "}
           </div>
           <TextField
             sx={{ float: "right" }}
